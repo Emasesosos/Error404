@@ -1,0 +1,116 @@
+.mainbox {
+    align-items: center;
+    color: #343434;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    .number {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        h1 {
+            background: url('./../../img/bg.jpg') center no-repeat;
+            font-size: 100px;
+            font-weight: 900;
+            margin: 0;
+            padding: 12px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            &:nth-child(2) {
+                color: #ced6e0;
+            }
+        }
+        img {
+            position: absolute;
+        }
+        .App-logo {
+            height: 75px;
+            pointer-events: none;
+        }
+    }
+    .msg {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+        a {
+            border: solid 2px #e55039;
+            background-color: #e55039;
+            border-radius: 5px;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 12px 24px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color .8s ease;
+            &:hover {
+                background-color: #ffffff;
+                border: solid 2px #e55039;
+                color: #e55039;
+            }
+        }
+        p {
+            font-size: 16px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@include tablet {
+    .mainbox {
+        .number {
+            h1 {
+                font-size: 130px;
+            }
+            .App-logo {
+                height: 100px;
+                pointer-events: none;
+            }
+        }
+        .msg {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .mainbox {
+        .number {
+            h1 {
+                font-size: 160px;
+            }
+            .App-logo {
+                height: 125px;
+                pointer-events: none;
+            }
+        }
+        .msg {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 10s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
