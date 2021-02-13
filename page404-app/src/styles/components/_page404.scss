@@ -1,116 +1,134 @@
-.mainbox {
+.page404__container {
     align-items: center;
-    color: #343434;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.page404__name {
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    p {
+        color: #333333;
+        font-family: 'Inconsolata', monospace;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 25px;
+    }
+}
+
+.page404__main {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
-    .number {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        h1 {
-            background: url('./../../img/bg.jpg') center no-repeat;
-            font-size: 100px;
-            font-weight: 900;
-            margin: 0;
-            padding: 12px;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            &:nth-child(2) {
-                color: #ced6e0;
-            }
-        }
-        img {
-            position: absolute;
-        }
-        .App-logo {
-            height: 75px;
-            pointer-events: none;
+    position: absolute;
+    top: 100px;
+}
+
+.page404__img {
+    height: 220.35px;
+    margin-bottom: 77.65px;
+    width: 286.83px;
+    img {
+        width: 100%;
+    }
+}
+
+@include tablet {
+    .page404__main {
+        flex-direction: row;
+        top: 70px;
+    }
+    .page404__img {
+        height: 447.43px;
+        margin-bottom: 0;
+        margin-right: 120px;
+        width: 539.22px;
+    }
+}
+
+.page404__info {
+    padding-left: 24px;
+    .page404__title {
+        margin-bottom: 30px;
+        width: 350px;
+        p {
+            color: #333333;
+            font-family: 'Space Mono', monospace;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: -0.035em;
+            line-height: 71px;
         }
     }
-    .msg {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 5px;
-        padding: 5px;
-        a {
-            border: solid 2px #e55039;
-            background-color: #e55039;
-            border-radius: 5px;
-            color: #ffffff;
-            display: inline-block;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 12px 24px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: background-color .8s ease;
-            &:hover {
-                background-color: #ffffff;
-                border: solid 2px #e55039;
-                color: #e55039;
-            }
-        }
+    .page404__description {
+        margin-bottom: 65px;
+        width: 328px;
         p {
-            font-size: 16px;
-            padding-bottom: 30px;
+            color: #4F4F4F;
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: -0.035em;
+            line-height: 36px;
         }
     }
 }
 
 @include tablet {
-    .mainbox {
-        .number {
-            h1 {
-                font-size: 130px;
-            }
-            .App-logo {
-                height: 100px;
-                pointer-events: none;
-            }
-        }
-        .msg {
+    .page404__info {
+        padding-left: 0;
+        .page404__title {
+            margin-bottom: 36px;
+            width: 586px;
             p {
-                font-size: 18px;
+                font-size: 64px;
+                line-height: 95px;
             }
         }
-    }
-}
-
-@include desktop {
-    .mainbox {
-        .number {
-            h1 {
-                font-size: 160px;
-            }
-            .App-logo {
-                height: 125px;
-                pointer-events: none;
-            }
-        }
-        .msg {
+        .page404__description {
+            width: 381px;
             p {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 10s linear;
+.page404__back {
+    a {
+        background: #333333;
+        color: white;
+        font-family: 'Space Mono', monospace;
+        padding: 24px 43px 23px 43px;
+        text-decoration: none;
     }
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+footer {
+    padding: 20px 0;
+    position: absolute;
+    top: 105%;
+    .page404__footer {
+        display: flex;
+        a,
+        p {
+            color: #333333;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
     }
-    to {
-        transform: rotate(360deg);
+}
+
+@include tablet {
+    footer {
+        top: 90%;
     }
 }
